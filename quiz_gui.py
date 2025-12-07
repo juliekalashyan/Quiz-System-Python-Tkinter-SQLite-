@@ -180,11 +180,11 @@ def user_window():
                 else:
                     for w in win.winfo_children():
                         w.destroy()
-                    tk.Label(win,text="Quiz Finished!", font=("Arial", 18, "bold"), bg="#fffaf0", fg="#2f855a").pack(pady=(40, 5))
+                    tk.Label(win,text="Quiz Finished!", font=("Arial", 18, "bold"), 
+                             bg="#fffaf0", fg="#2f855a").pack(pady=(40, 5))
 
-                    tk.Label(
-                        win,
-                        text=f"Score: {score}/{len(questions)}", font=("Arial", 20, "bold"), bg="#fffaf0", fg="#e38d33").pack(pady=(0, 40))
+                    tk.Label(win, text=f"Score: {score}/{len(questions)}", font=("Arial", 20, "bold"), 
+                        bg="#fffaf0", fg="#e38d33").pack(pady=(0, 40))
 
                     tk.Button(win, text="Close", command=win.destroy,
                               bg="#f44336", fg="white", font=("Arial", 12)).pack(pady=10)
@@ -212,3 +212,4 @@ def main_gui():
               bg="#2196f3", fg="white", font=("Arial", 12)).pack(pady=15)
 
     root.mainloop()
+
